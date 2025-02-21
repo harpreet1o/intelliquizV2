@@ -1,6 +1,6 @@
 import express from "express";
 import 'dotenv/config';
-import {admin} from "../firebase/firebase-config.js";
+import admin from "../firebase/firebase-config.js";
 import { checkUserByGoogleId,insertUser } from "../databaseSetup/database.js";
 const router=express.Router();
 
