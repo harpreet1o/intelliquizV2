@@ -25,6 +25,4 @@ dist-ssr
 
 # Environment variables
 .env
-firebaseKey.json
-firebase-config.js
-firebase-config.jsx
+
