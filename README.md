@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./App/src/components/images/logo.png" width="200" height="200" alt="Intelliquiz logo"/>
+<img src="./App/frontend/src/components/images/logo.png" width="200" height="200" alt="Intelliquiz logo"/>
 </p>
 <h1 align="center">
 IntelliQuiz - An AI-Powered Quiz Maker App
