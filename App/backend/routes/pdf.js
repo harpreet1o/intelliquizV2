@@ -4,11 +4,18 @@ import jsZip from "jszip";
 import busboy from 'busboy';
 import { v4 as uuidv4 } from 'uuid';
 import express from "express";
+import dotenv from "dotenv";
 
+dotenv.config();
 const router=express.Router();
 
-const clientID = process.env.VITE_PDF_CLIENT_ID;
-const clientSecret = process.env.VITE_PDF_CLIENT_SECRET;
+const clientID = process.env.PDF_CLIENT_ID;
+const clientSecret = process.env.PDF_CLIENT_SECRET;
+
+console.log("Client ID:", clientID); // Debugging line
+console.log("Client Secret:", clientSecret); // Debugging line
+
+// ...rest of your code
 
 
 
@@ -393,7 +400,7 @@ const encryptPDF = async (token, downloadURI, pwd) => {
 // quiz download function
 export const downloadQuiz = async (quiz, template, pwd = null, ansCheckbox,report = false) => {
     let templatePath="";
-    if(tempate=="report")
+    if(template=="report")
         templatePath="report-template.docx";
       if(template === "multiple choice"){
         templatePath = ansCheckbox ? "quiz-mcq-wa-template.docx" : "quiz-mcq-na-template.docx"
